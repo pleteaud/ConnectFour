@@ -6,11 +6,13 @@
 *@param: Str1 Str2 represents symbol and name respectively
 */
 Player::Player()
+	:name{"Unknown"}, symbol{"Unknown"}
 {
-	std::cout << ">> What's your Name: ";
-	std::getline(std::cin, name);
-	std::cout << "\n>> What would you like your symbol to be: ";
-	std::getline(std::cin, symbol);
+}
+
+Player::Player(std::string str, std::string sym)
+	:name{ str }, symbol{ sym }
+{
 }
 
 Player::~Player()

@@ -1,5 +1,5 @@
 #include "Board.h"
-
+#include "Core.h"
 
 ///Constructor: Initialize 2D Vector with all "_" to indicate empty spaces. 
 /**
@@ -192,9 +192,10 @@ void Board::addPoint(uint16_t x_coor, Player &p)
 		//catch the error thrown by check()
 		catch (const Exception &e)
 		{
-			std::cout << e.message << "\nEnter a new number: \n";
-			std::cin >> x_coor;
-			x_coor -= 1;
+			
+			throw e;
+			/*std::cin >> x_coor;
+			x_coor -= 1;*/
 		}
 
 	}
